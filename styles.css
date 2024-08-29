@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    background-color: #b2beb5;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2.5vw 10.4vw;
+    justify-content: space-between;
+    height: 12vh;
+    z-index: 10;
+}
+
+nav h1 {
+    font-size: 1.6vw;
+}
+
+.nav-part2 {
+    display: flex;
+    gap: 3vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 4;
+}
+
+.nav-part2 h4 {
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #21421e;
+    margin-bottom: 0.6vw;
+}
+
+.nav-part2 h5 {
+    margin-bottom: 0vw;
+    opacity: 1; /* Fix opacity */
+}
+
+.nav-part2 h5 span {
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+}
+
+#nav-bottom {
+    background-color: #b2beb5;
+    height: 0;
+    position: absolute;
+    width: 79%;
+    top: 100%;
+    bottom: 0;
+    z-index: 0;
+    border-bottom: 2px solid #fff;
+    transition-duration: 0.65s;
+    padding-left: 18.2vw;
+    overflow: hidden;
+}
+
+nav button {
+    background-color: #997a8d;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 1vw;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    transition-duration: 0.4s;
+    position: relative;
+}
+
+nav button:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #b2beb5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    color: #997a8d;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
+}
+
+#moving-div {
+    margin: 2vh auto;
+    padding-left: 15vw;
+    width: 60%;
+    white-space: nowrap;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#moving-div .move {
+    display: inline-block;
+    position: relative;
+    animation-name: move;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-div .move img {
+    width: 3vw;
+    margin: 0 1.2vw;
+}
+#blur-left {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    //background-color: red;
+    background:linear-gradient(to right ,#997a8d,transparent);
+}
+#blur-right {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    background:linear-gradient(to right,transparent,#997a8d);
+    top: 0;
+    right: 0;
+    z-index: 2;
+    //background-color: red;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#page1 h1 #icon {
+    display: inline-block;
+    width: 7vw;
+    height: 7vw;
+    background-image: url('oo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#page1 p {
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #004040;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+#page1-something {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1-something h4 {
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: lowercase;
+    padding: 5px 12px;
+    border: 1px solid #111;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: color 0.3s, background-color 0.3s, text-decoration 0.3s;
+}
+
+#page1-something h4:hover {
+    color: #111;
+    font-size: 2.5rem;
+    background-color: #111;
+}
+
+#page1-something h4:nth-last-child(1) {
+    background-color: #db7093;
+}
+
+#page1-something h4:nth-last-child(2) {
+    background-color: #ffc0cb;
+}
+
+#page1-something h4:nth-last-child(3) {
+    background-color: #e7accf;
+}
+
+#page2, #page3 {
+    height: 100vh;
+    width: 100%;
+}
+
+#page2 {
+    background-color: #111;
+}
+
+#page3 {
+    background-color: #fff;
+}
+
